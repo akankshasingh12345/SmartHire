@@ -1,0 +1,53 @@
+[
+  {
+    "question": " Which is the planet nearest to the sun?",
+    "options": ["Earth", "Mars", "Mercury", "Saturn"],
+    "answer": "Mercury"
+  },
+  {
+    "question": "Which is the longest river in the world?",
+    "options": ["Amazon", "Nile", "Yangtze", "Mississippi"],
+    "answer": "Nile"
+  },
+  {
+    "question": "Which is the longest river in India?",
+    "options": ["Ganga", "Yamuna", "Godavari", "Brahmaputra"],
+    "answer": "Ganga"
+  },
+  {
+    "question": "Which is the second planet from the Sun?",
+    "options": ["Mercury", "Venus", "Earth", "Mars"],
+    "answer": "Venus"
+  },
+
+  {
+    "question": " Which river is known as the 'Sorrow of Bihar?",
+    "options": ["Kosi", "Ganga", "Yamuna", "Mahanadi"],
+    "answer": "Kosi"
+  },
+  {
+    "question": "What is the national animal of India?",
+    "options": ["Lion", "Tiger", "Elephant", "Peacock"],
+    "answer": "Tiger"
+  },
+  {
+    "question": "What is the national fruit of India? ",
+    "options": ["Apple", "Banana", "Mango", "Grapes"],
+    "answer": "Mango"
+  },
+  {
+    "question": "Which planet is known for its rings?",
+    "options": ["Earth", "Mars", "Saturn", "Neptune"],
+    "answer": "Saturn"
+  },
+  {
+    "question": "What is the national currency of India? ",
+    "options": ["Dollar", "Euro", "Rupee", "Yen"],
+    "answer": "Rupee"
+  },
+  {
+    "question": "What is the national tree of India?",
+    "options": ["Neem", "Banyan", "Peepal", "Mango"],
+    "answer": "Banyan"
+  }
+]

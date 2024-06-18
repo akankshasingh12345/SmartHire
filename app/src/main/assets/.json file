@@ -48,6 +48,6 @@
        {
          "question": "What is the national tree of India?",
           "options": ["Neem", "Banyan", "Peepal", "Mango"],
-           "answer": Banyan"
-          },
+           "answer": "Banyan"
+          }
 ]

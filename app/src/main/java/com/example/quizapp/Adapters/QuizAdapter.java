@@ -20,7 +20,8 @@ public class QuizAdapter extends RecyclerView.Adapter<QuizAdapter.QuizViewHolder
     private ArrayList<Question> questions;
     private MainActivity mainActivity;
 
-    public QuizAdapter(ArrayList<Question> questions, MainActivity mainActivity) {
+    public QuizAdapter(ArrayList<Question>
+          questions, MainActivity mainActivity) {
         this.questions = questions;
         this.mainActivity = mainActivity;
 

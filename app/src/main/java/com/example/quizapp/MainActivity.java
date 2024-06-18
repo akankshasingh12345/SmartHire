@@ -44,8 +44,10 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recyclerView);
         timerTextView = findViewById(R.id.timerTextView);
+
+
         questions = loadQuestions();
-        adapter = new QuizAdapter(questions, this::updateCurrentQuestionIndex);
+        adapter = new QuizAdapter(questions, this);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
 
@@ -72,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
                 String question = obj.getString("question");
                 JSONArray optionsArray = obj.getJSONArray("options");
                 ArrayList<String> options = new ArrayList<>();
+
                 for (int j = 0; j < optionsArray.length(); j++) {
                     options.add(optionsArray.getString(j));
                 }
@@ -108,21 +111,26 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt(KEY_QUESTION_INDEX, currentQuestionIndex);
-        editor.putLong(KEY_TIME_LEFT, timeLeftInMillis);
-        editor.apply();
+
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putInt(KEY_QUESTION_INDEX, currentQuestionIndex);
+            editor.putLong(KEY_TIME_LEFT, timeLeftInMillis);
+            editor.apply();
+
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        currentQuestionIndex = sharedPreferences.getInt(KEY_QUESTION_INDEX, 0);
-        timeLeftInMillis = sharedPreferences.getLong(KEY_TIME_LEFT, TOTAL_TIME);
-        startTimer();
-        recyclerView.scrollToPosition(currentQuestionIndex);
-    }
-    public void updateCurrentQuestionIndex(int index) {
+
+            currentQuestionIndex = sharedPreferences.getInt(KEY_QUESTION_INDEX, 0);
+            timeLeftInMillis = sharedPreferences.getLong(KEY_TIME_LEFT, TOTAL_TIME);
+            startTimer();
+            recyclerView.scrollToPosition(currentQuestionIndex);
+        }
+
+    public void updateCurrentQuestionIndex(int index)
+    {
         currentQuestionIndex =index;
 }
 }
